@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>movie-finder</title>
+  </head>
+  <body class="flex justify-center items-center h-screen p-7">
+
+    <div id="app" class="w-full  h-full rounded-2xl">
+
+      <header class="flex items-center justify-between pl-5 pr-5 rounded-tl-2xl rounded-tr-2xl border-b">
+        <img id="logo" src="/src/assets/img/logo.png" alt="">
+
+        <div id="btn" class="flex gap-5">
+
+          <button id="darkMode" class="border w-15 h-7 rounded-md"><i class="fa-regular fa-moon"></i></button>
+
+          <button id="favorite" class="flex border w-25 justify-around h-7 rounded-md">
+
+            <li class="list-none"><i class="fa-solid fa-heart"></i></li>
+            <li id="textBtn" class="list-none">Favorites</li>
+
+          </button>
+
+        </div>
+      </header>
+
+      <main class="h-113">
+
+        <div id="searchText" class="flex justify-center flex-col items-center pt-3 mb-3">
+
+          <div class="flex gap-2">
+            <h1 id="textPart1" class="text-4xl text font-bold" >Find your next</h1>
+            <h1 id="textPart2" class="text-4xl text font-bold">favorite movie</h1>
+          </div>
+          <p>Search for any movie and discover details, ratings and more</p>
+        </div>
+
+        <div class="flex justify-center items-center">
+
+          <div id="searchContainer" class="flex justify-between items-center gap-2 h-10 w-3xl rounded-md pl-3 pr-3 border">
+
+            <div class="flex items-center gap-5 w-full">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" placeholder="Search movie..." class="w-full">
+            </div>
+
+            <button id="searchBtn" class="border p-1 pl-2 pr-2 rounded-md w-25">Search</button>          
+          </div>
+          
+        </div>
+
+        <div id="searched"></div>
+
+        <div id="containerMovies" class="flex justify-around items-center h-full flex-wrap">
+
+          <article class="border rounded-2xl h-60 w-50">
+
+              <div class="header h-full rounded-tl-2xl rounded-tr-2xl"></div>
+
+              <span class="p-1 w-15 mt-1 mr-1 text-center rounded-xl flex gap-2">
+                <li class="star list-none text-sm"><i class="fa-solid fa-star"></i></li>
+                <li class="list-none text-sm">8.8</li>
+              </span>
+
+              <div class="movieContent rounded-bl-2xl rounded-br-2xl pl-2">
+                <h1 class="font-bold">Interestellar</h1>
+                <p>2014</p>
+              </div>
+
+          </article>
+          <article class="border rounded-2xl h-60 w-50">
+            <div class="image"><span></span></div>
+          </article>
+          <article class="border rounded-2xl h-60 w-50">
+            <div class="image"><span></span></div>
+          </article>
+          <article class="border rounded-2xl h-60 w-50">
+            <div class="image"><span></span></div>
+          </article>
+          <article class="border rounded-2xl h-60 w-50">
+            <div class="image"><span></span></div>
+          </article>
+          <article class="border rounded-2xl h-60 w-50">
+            <div class="image"><span></span></div>
+          </article>
+
+        </div>
+      </main>
+
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

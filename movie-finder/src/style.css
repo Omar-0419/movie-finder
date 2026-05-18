@@ -1,0 +1,209 @@
+@import "tailwindcss";
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+
+:root{
+
+    /* ===== PRIMARY COLORS ===== */
+    --primary-color: #8B5CF6;
+    --primary-hover: #7C3AED;
+    --primary-light: #A78BFA;
+
+    /* ===== BACKGROUNDS ===== */
+    --background-main: #070B1A;
+    --background-secondary: #0F172A;
+    --background-card: #111827;
+    --background-input: #1E293B;
+
+    /* ===== TEXT ===== */
+    --text-main: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+
+    /* ===== BORDERS ===== */
+    --border-color: #1E293B;
+    --border-light: #334155;
+
+    /* ===== BUTTONS ===== */
+    --button-primary: #8B5CF6;
+    --button-primary-hover: #7C3AED;
+
+    --button-secondary: #1E293B;
+    --button-secondary-hover: #334155;
+
+    /* ===== STATUS COLORS ===== */
+    --success: #10B981;
+    --warning: #FACC15;
+    --danger: #EF4444;
+    --info: #38BDF8;
+
+    /* ===== RATINGS ===== */
+    --rating-color: #FACC15;
+
+    /* ===== ICONS ===== */
+    --icon-color: #CBD5E1;
+
+    /* ===== SHADOWS ===== */
+    --shadow-primary: rgba(139, 92, 246, 0.25);
+    --shadow-card: rgba(0, 0, 0, 0.35);
+
+    /* ===== HOVER ===== */
+    --hover-overlay: rgba(255,255,255,0.05);
+
+    /* ===== GRADIENTS ===== */
+    --gradient-primary: linear-gradient(
+        135deg,
+        #8B5CF6,
+        #6366F1
+    );
+
+    --gradient-dark: linear-gradient(
+        135deg,
+        #070B1A,
+        #111827
+    );
+
+    --transition: all .3s ease;
+
+}
+
+body{
+  background-color: var(--background-main);
+}
+
+button{
+  cursor: pointer;
+}
+
+#app{
+  background: var(--gradient-dark);;
+  border: 1px solid var(--border-color);
+}
+
+header{
+  background-color: var(--background-secondary);
+  border-color: var(--border-color);
+}
+
+#logo{
+  width: 15rem;
+}
+
+#btn button{
+  border: 1px solid var(--border-light);
+  background-color: var(--button-secondary);
+  color: var(--icon-color);
+  transition: var(--transition);
+}
+
+#btn button:hover{
+  background-color: var(--button-secondary-hover);
+}
+
+#favorite li{
+  color: var(--button-primary);
+}
+
+#favorite #textBtn{
+  color: var(--icon-color);
+}
+
+
+#textPart1{
+  color: var(--text-main);
+}
+
+#textPart2{
+  color: var(--primary-hover);
+}
+
+#searchText p{
+  color: var(--text-secondary);
+}
+
+#searchContainer{
+  background-color: var(--background-input);
+  border-color: var(--border-light);
+}
+
+#searchContainer i{
+  color: var(--border-light);
+}
+
+#searchContainer:focus-within{
+  border-color: var(--button-primary);
+}
+
+#searchContainer:focus-within i{
+  color: var(--button-primary);
+}
+
+#searchContainer input:focus{
+  outline: none;
+}
+
+#searchContainer input{
+  color: var(--text-muted);
+}
+
+#searchBtn{
+  color: var(--text-main);
+  border: none;
+  background-color: var(--button-primary); 
+  transition: var(--transition);
+}
+
+#searchBtn:hover{
+  background-color: var(--button-primary-hover);
+}
+
+
+
+article{
+  position: relative;
+  display: grid;
+  grid-template-rows: 60%;
+  border: 1px solid var(--border-light);
+}
+
+article .header{
+  background-image: url(/src/assets/img/movies/interestelar.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+article span{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  background-color: var(--background-main);
+  color: var(--text-main);
+}
+
+.star{
+  color: var(--rating-color);
+}
+
+
+article img{
+  object-fit: cover;
+}
+
+.movieContent{
+  background-color: var(--background-input);
+  border-top: 1px solid var(--border-light);
+}
+
+.movieContent h1{
+  font-size: large;
+  color: var(--text-main);
+}
+
+.movieContent p{
+  font-size: small;
+  color: var(--text-secondary);
+}
+
+
