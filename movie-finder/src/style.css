@@ -83,6 +83,7 @@ button{
 header{
   background-color: var(--background-secondary);
   border-color: var(--border-color);
+  backdrop-filter: blur(10px);
 }
 
 #logo{
@@ -132,6 +133,7 @@ header{
 
 #searchContainer:focus-within{
   border-color: var(--button-primary);
+  box-shadow: 0 0 25px var(--shadow-primary);
 }
 
 #searchContainer:focus-within i{
@@ -157,6 +159,19 @@ header{
   background-color: var(--button-primary-hover);
 }
 
+#popularText{
+  color: var(--text-main);
+}
+
+#listPopular{
+  list-style-type: "| ";
+}
+
+#listPopular::marker{
+  color: var(--button-primary);
+  font-size: 1.8rem;
+}
+
 
 
 article{
@@ -164,13 +179,18 @@ article{
   display: grid;
   grid-template-rows: 60%;
   border: 1px solid var(--border-light);
+  transition: var(--transition);
 }
 
-article .header{
-  background-image: url(/src/assets/img/movies/interestelar.avif);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+article:hover{
+  border-color: var(--button-primary);
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px var(--shadow-card);
+}
+
+article .header img{
+  transition: var(--transition);
+  
 }
 
 article span{
@@ -180,6 +200,7 @@ article span{
   z-index: 10;
   background-color: var(--background-main);
   color: var(--text-main);
+  opacity: 90%;
 }
 
 .star{
@@ -194,6 +215,11 @@ article img{
 .movieContent{
   background-color: var(--background-input);
   border-top: 1px solid var(--border-light);
+  transition: var(--transition);
+}
+
+article:hover .movieContent{
+  border-color: var(--button-primary);
 }
 
 .movieContent h1{

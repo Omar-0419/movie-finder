@@ -8,7 +8,7 @@
   </head>
   <body class="flex justify-center items-center h-screen p-7">
 
-    <div id="app" class="w-full  h-full rounded-2xl">
+    <div id="app" class="flex flex-col w-full  h-full rounded-2xl">
 
       <header class="flex items-center justify-between pl-5 pr-5 rounded-tl-2xl rounded-tr-2xl border-b">
         <img id="logo" src="/src/assets/img/logo.png" alt="">
@@ -40,11 +40,11 @@
 
         <div class="flex justify-center items-center">
 
-          <div id="searchContainer" class="flex justify-between items-center gap-2 h-10 w-3xl rounded-md pl-3 pr-3 border">
+          <div id="searchContainer" class="flex justify-between items-center gap-2 h-10 w-3xl rounded-md pl-3 pr-3 border mb-5">
 
             <div class="flex items-center gap-5 w-full">
               <i class="fa-solid fa-magnifying-glass"></i>
-              <input type="text" placeholder="Search movie..." class="w-full">
+              <input id="searchInput" type="text" placeholder="Search movie..." class="w-full">
             </div>
 
             <button id="searchBtn" class="border p-1 pl-2 pr-2 rounded-md w-25">Search</button>          
@@ -52,13 +52,19 @@
           
         </div>
 
-        <div id="searched"></div>
+        <!-- <div id="searched"></div> -->
+
+        <div class="pl-10">
+          <li id="listPopular"><h1 id="popularText" class="text-2xl font-bold">Popular Movies</h1></li>
+        </div>
 
         <div id="containerMovies" class="flex justify-around items-center h-full flex-wrap">
 
-          <article class="border rounded-2xl h-60 w-50">
+          <!-- <article class="border rounded-2xl h-60 w-50">
 
-              <div class="header h-full rounded-tl-2xl rounded-tr-2xl"></div>
+              <div class="header h-full rounded-tl-2xl rounded-tr-2xl">
+                <img src="/src/assets/img/movies/interestelar.avif" class="h-full border-0 rounded-tl-2xl rounded-tr-2xl">
+              </div>
 
               <span class="p-1 w-15 mt-1 mr-1 text-center rounded-xl flex gap-2">
                 <li class="star list-none text-sm"><i class="fa-solid fa-star"></i></li>
@@ -72,20 +78,88 @@
 
           </article>
           <article class="border rounded-2xl h-60 w-50">
-            <div class="image"><span></span></div>
+
+            <div class="header h-full rounded-tl-2xl rounded-tr-2xl">
+              <img src="/src/assets/img/movies/iamlegend.jpg" class="h-full border-0 rounded-tl-2xl rounded-tr-2xl">
+            </div>
+
+              <span class="p-1 w-15 mt-1 mr-1 text-center rounded-xl flex gap-2">
+                <li class="star list-none text-sm"><i class="fa-solid fa-star"></i></li>
+                <li class="list-none text-sm">7.2</li>
+              </span>
+
+              <div class="movieContent rounded-bl-2xl rounded-br-2xl pl-2">
+                <h1 class="font-bold">I am Legend</h1>
+                <p>2007</p>
+              </div>
+
           </article>
           <article class="border rounded-2xl h-60 w-50">
-            <div class="image"><span></span></div>
+            
+            <div class="header h-full rounded-tl-2xl rounded-tr-2xl">
+              <img src="/src/assets/img/movies/titanic.webp" class="h-full border-0 rounded-tl-2xl rounded-tr-2xl">
+            </div>
+
+              <span class="p-1 w-15 mt-1 mr-1 text-center rounded-xl flex gap-2">
+                <li class="star list-none text-sm"><i class="fa-solid fa-star"></i></li>
+                <li class="list-none text-sm">8.1</li>
+              </span>
+
+              <div class="movieContent rounded-bl-2xl rounded-br-2xl pl-2">
+                <h1 class="font-bold">Titanic</h1>
+                <p>1997</p>
+              </div>
+
           </article>
           <article class="border rounded-2xl h-60 w-50">
-            <div class="image"><span></span></div>
+
+            <div class="header h-full rounded-tl-2xl rounded-tr-2xl">
+              <img src="/src/assets/img/movies/deadpoolandwolverine.jpg" class="h-full border-0 rounded-tl-2xl rounded-tr-2xl">
+            </div>
+
+              <span class="p-1 w-15 mt-1 mr-1 text-center rounded-xl flex gap-2">
+                <li class="star list-none text-sm"><i class="fa-solid fa-star"></i></li>
+                <li class="list-none text-sm">7.5</li>
+              </span>
+
+              <div class="movieContent rounded-bl-2xl rounded-br-2xl pl-2">
+                <h1 class="font-bold">Deadpool and Wolverine</h1>
+                <p>2024</p>
+              </div>
+
           </article>
           <article class="border rounded-2xl h-60 w-50">
-            <div class="image"><span></span></div>
+
+            <div class="header h-full rounded-tl-2xl rounded-tr-2xl">
+              <img src="/src/assets/img/movies/wwz.webp" class="h-full border-0 rounded-tl-2xl rounded-tr-2xl">
+            </div>
+
+              <span class="p-1 w-15 mt-1 mr-1 text-center rounded-xl flex gap-2">
+                <li class="star list-none text-sm"><i class="fa-solid fa-star"></i></li>
+                <li class="list-none text-sm">7.1</li>
+              </span>
+
+              <div class="movieContent rounded-bl-2xl rounded-br-2xl pl-2">
+                <h1 class="font-bold">World War Z</h1>
+                <p>2013</p>
+              </div>
+
           </article>
           <article class="border rounded-2xl h-60 w-50">
-            <div class="image"><span></span></div>
-          </article>
+            <div class="header h-full rounded-tl-2xl rounded-tr-2xl">
+              <img src="/src/assets/img/movies/endgame.webp" class="h-full border-0 rounded-tl-2xl rounded-tr-2xl">
+            </div>
+
+              <span class="p-1 w-15 mt-1 mr-1 text-center rounded-xl flex gap-2">
+                <li class="star list-none text-sm"><i class="fa-solid fa-star"></i></li>
+                <li class="list-none text-sm">8.4</li>
+              </span>
+
+              <div class="movieContent rounded-bl-2xl rounded-br-2xl pl-2">
+                <h1 class="font-bold">Avangers End Game</h1>
+                <p>2019</p>
+              </div>
+          </article> -->
 
         </div>
       </main>
