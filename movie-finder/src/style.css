@@ -174,7 +174,7 @@ header{
 
 
 
-article{
+#movies{
   position: relative;
   display: grid;
   grid-template-rows: 60%;
@@ -182,18 +182,18 @@ article{
   transition: var(--transition);
 }
 
-article:hover{
+#movies:hover{
   border-color: var(--button-primary);
   transform: scale(1.03);
   box-shadow: 0 10px 30px var(--shadow-card);
 }
 
-article .header img{
+#movies .header img{
   transition: var(--transition);
   
 }
 
-article span{
+#movies span{
   position: absolute;
   top: 0;
   right: 0;
@@ -208,7 +208,7 @@ article span{
 }
 
 
-article img{
+#movies img{
   object-fit: cover;
 }
 
@@ -218,7 +218,7 @@ article img{
   transition: var(--transition);
 }
 
-article:hover .movieContent{
+#movies:hover .movieContent{
   border-color: var(--button-primary);
 }
 
@@ -231,5 +231,91 @@ article:hover .movieContent{
   font-size: small;
   color: var(--text-secondary);
 }
+
+#searchedMovie{
+  border: 1px solid var(--border-light);
+  transition: var(--transition);
+}
+
+#searchedMovie:hover{
+  border: 1px solid var(--button-primary);
+}
+
+#overview{
+  border-color: var(--border-light)
+}
+
+#overview p{
+  color: var(--text-secondary);
+}
+
+#name{
+  color: var(--text-main);
+}
+
+.yearC{
+  color: var(--text-muted);
+}
+
+.listSearched{
+  list-style-type: "| ";
+}
+
+.listSearched::marker{
+  color: var(--border-light);
+  font-size: 1rem;
+}
+
+#dataMovie #rating{
+  color: var(--rating-color);
+}
+
+#dataMovie p{
+  border-color: var(--border-light);
+}
+
+
+#director{
+  color: var(--primary-color);
+}
+
+#nameDirector{
+  color: var(--text-main);
+}
+
+#addFavorite{
+  border: 1px solid var(--border-light);
+  background-color: var(--button-secondary);
+  color: var(--icon-color);
+  transition: var(--transition);
+}
+
+#addFavorite:hover{
+  background-color: var(--button-secondary-hover);
+  transform: translateY(-0.2rem);
+  color: var(--button-primary);
+}
+
+table{
+  background-color: var(--background-input);
+  box-shadow: 0 10px 30px var(--shadow-card);
+
+}
+
+table td{
+  text-align: center;
+  width: 7rem;
+  height: 3rem;
+}
+
+table tr{
+  border-color: var(--border-light);
+}
+
+.descriptionTable{
+  color: var(--text-main);
+}
+
+
 
 
